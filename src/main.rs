@@ -10,6 +10,7 @@ pub mod day09;
 pub mod day10;
 pub mod day11;
 pub mod day12;
+pub mod day13;
 
 use std::{
     env::args,
@@ -24,5 +25,5 @@ fn main() {
         Some(path) => Box::new(BufReader::new(File::open(path).unwrap())),
         None => Box::new(BufReader::new(stdin.lock())),
     };
-    crate::day12::run(Box::new(reader));
+    crate::day13::run(Box::new(reader));
 }
